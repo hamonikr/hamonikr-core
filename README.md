@@ -11,7 +11,7 @@ sudo apt install hamonikr-system-settings
 ```
 
 ## Adjustment Works
-
+```
 ### APT 관련 설정
 etc/apt/apt.conf.d/00hamonikr
 etc/apt/preferences.d/hamonikr.pref
@@ -61,6 +61,7 @@ usr/share/mime/packages/alzip.xml
 usr/share/mint-mirrors/linuxmint.list
 usr/share/nemo/actions/*
 usr/share/plymouth/themes/*
+```
 
 # Issues
 
