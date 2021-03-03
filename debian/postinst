@@ -1,0 +1,38 @@
+#!/bin/sh
+
+set -e
+
+case "$1" in
+    configure|triggered)
+        if [ -f "/usr/share/ubuntu-system-adjustments/systemd/adjust-grub-title" ] ; then
+            sed -i 's|/etc/linuxmint/info|/etc/hamonikr/info|g' /usr/share/ubuntu-system-adjustments/systemd/adjust-grub-title || true
+            sed -i 's|grub_title = "Linux Mint"|grub_title = "HamoniKR"|g' /usr/share/ubuntu-system-adjustments/systemd/adjust-grub-title || true           
+        fi
+        
+        if which systemctl >/dev/null 2>&1
+        then
+            echo "Reloading systemd"
+            systemctl disable ubuntu-system-adjustments
+            systemctl enable hamonikr-system-settings.service
+            systemctl daemon-reload || true
+        fi
+        
+        fc-cache -v -f  >/dev/null 2>&1 || true
+
+        update-mime-database /usr/share/mime || true
+        update-desktop-database /usr/share/applications || true
+
+        /usr/bin/hamonikr-system-start || true
+    ;;
+    abort-upgrade|abort-remove|abort-deconfigure)
+
+    ;;
+    *)
+        echo "postinst called with unknown argument \`$1'" >&2
+        exit 1
+    ;;
+esac
+
+exit 0
+
+

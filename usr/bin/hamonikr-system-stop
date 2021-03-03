@@ -1,0 +1,18 @@
+#!/usr/bin/python3
+import datetime
+import subprocess
+
+try:
+    # Log current datetime
+    now = str(datetime.datetime.now())
+    with open("/var/log/hamonikr-system-start.log", "w") as f:
+        f.write(now)
+
+    # Adjust Grub title
+    subprocess.call(["/usr/bin/update-grub-title.py"])
+
+    # Save current display setting
+    subprocess.call(["/usr/local/bin/auto-display-setup"])    
+
+except:
+    pass

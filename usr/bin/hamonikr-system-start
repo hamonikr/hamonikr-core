@@ -1,0 +1,29 @@
+#!/usr/bin/python3
+import datetime
+import subprocess
+
+try:
+    # Log current datetime
+    now = str(datetime.datetime.now())
+    with open("/var/log/hamonikr-system-start.log", "w") as f:
+        f.write(now)
+        # f.close()
+
+    # Disable ubuntu-system-adjustments
+    subprocess.call(["systemctl", "disable", "ubuntu-system-adjustments"])
+
+    # Apply Default HamoniKR System Settings
+    subprocess.call(["/usr/bin/hamonikr-system-settings"])     
+
+    # Adjust Grub title
+    subprocess.call(["/usr/bin/update-grub-title.py"])
+
+    # Adjust firefox default setting
+    subprocess.call(["/usr/bin/update-firefox-setting"])    
+
+    # Adjust firefox default setting
+    subprocess.call(["/usr/bin/update-default-browser"])     
+    
+
+except:
+    pass

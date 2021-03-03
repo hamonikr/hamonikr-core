@@ -1,0 +1,24 @@
+#!/bin/sh
+
+set -e
+
+if [ -f "/usr/share/ubuntu-system-adjustments/systemd/adjust-grub-title" ] ; then
+    sed -i 's|/etc/hamonikr/info|/etc/linuxmint/info|g' /usr/share/ubuntu-system-adjustments/systemd/adjust-grub-title || true
+    sed -i 's|grub_title = "HamoniKR"|grub_title = "Linux Mint"|g' /usr/share/ubuntu-system-adjustments/systemd/adjust-grub-title || true           
+fi
+
+fc-cache -v -f  >/dev/null 2>&1 || true
+
+update-mime-database /usr/share/mime || true
+update-desktop-database /usr/share/applications || true
+
+if which systemctl >/dev/null 2>&1
+then
+    echo "Reloading systemd"
+    systemctl enable ubuntu-system-adjustments
+    systemctl daemon-reload || true
+fi
+
+exit 0
+
+

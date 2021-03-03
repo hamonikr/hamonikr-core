@@ -1,0 +1,6 @@
+hamonikr-server-settings (2.0.0) entjin; urgency=medium
+
+  * Release for HamoniKR Server
+   - Tested on hamonikr-server entjin
+
+ -- HamoniKR <pkg@hamonikr.org>  Wed, 03 Mar 2021 14:10:12 +0900
