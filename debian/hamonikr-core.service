@@ -1,5 +1,5 @@
 [Unit]
-Description=HamoniKR Server settings
+Description=HamoniKR System Settings
 
 [Service]
 Type=oneshot

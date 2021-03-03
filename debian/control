@@ -1,11 +1,11 @@
-Source: hamonikr-server-settings
+Source: hamonikr-core
 Section: admin
 Priority: optional
 Maintainer: Kevin Kim <root@hamonikr.org>
 Build-Depends: debhelper (>= 9)
 Standards-Version: 4.1.4
 
-Package: hamonikr-server-settings
+Package: hamonikr-core
 Architecture: all
 Depends: hamonikr-info (>> 2021.03.02), 
          fonts-noto-cjk-extra, 

@@ -13,7 +13,7 @@ case "$1" in
         then
             echo "Reloading systemd"
             systemctl disable ubuntu-system-adjustments
-            systemctl enable hamonikr-system-settings.service
+            systemctl enable hamonikr-core.service
             systemctl daemon-reload || true
         fi
         

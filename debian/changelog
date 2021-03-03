@@ -1,4 +1,4 @@
-hamonikr-server-settings (2.0.0) entjin; urgency=medium
+hamonikr-core (2.0.0) entjin; urgency=medium
 
   * Release for HamoniKR Server
    - Tested on hamonikr-server entjin
