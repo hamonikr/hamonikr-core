@@ -1,3 +1,10 @@
+hamonikr-core (2.0.1) entjin; urgency=medium
+
+  * Update debian/control
+   - Changed some pkgs Depends to Recommends
+
+ -- HamoniKR <pkg@hamonikr.org>  Thu, 04 Mar 2021 10:44:43 +0900
+
 hamonikr-core (2.0.0) entjin; urgency=medium
 
   * Release for HamoniKR Server

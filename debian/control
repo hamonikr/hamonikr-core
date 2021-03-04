@@ -7,13 +7,12 @@ Standards-Version: 4.1.4
 
 Package: hamonikr-core
 Architecture: all
-Depends: hamonikr-info (>> 2021.03.02), 
+Depends: hamonikr-info (>> 2021.03.01)
+Recommends: hamonikr-welcome, 
          fonts-noto-cjk-extra, 
          fonts-inconsolata, 
          albert, 
-         unalz, 
-         hamonikr-welcome
-Enhances: 
+         unalz 
 Conflicts: mint-artwork-common
 Replaces: ubuntu-system-adjustments, 
           mint-artwork-common, 
