@@ -10,8 +10,8 @@ if [ ! -f "$file2" ] ; then
     cp -af $file1 $file2
 fi
 
-file3="/etc/skel/.hamonikr/hamonikr-jin-terminal.dconf"
-file4="$HOME/.hamonikr/hamonikr-jin-terminal.dconf"        
+file3="/etc/skel/.hamonikr/hamonikr-terminal.dconf"
+file4="$HOME/.hamonikr/hamonikr-terminal.dconf"        
 
 if [ ! -f "$file4" ] ; then
     echo "Could not found $file4. Copying $file3 ..."    

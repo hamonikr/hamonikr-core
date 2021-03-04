@@ -21,7 +21,7 @@ try:
     # Adjust firefox default setting
     subprocess.call(["/usr/bin/update-firefox-setting"])    
 
-    # Adjust firefox default setting
+    # Adjust default web-browser setting to whale
     subprocess.call(["/usr/bin/update-default-browser"])     
     
 

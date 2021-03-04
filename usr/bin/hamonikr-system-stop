@@ -11,8 +11,5 @@ try:
     # Adjust Grub title
     subprocess.call(["/usr/bin/update-grub-title.py"])
 
-    # Save current display setting
-    subprocess.call(["/usr/local/bin/auto-display-setup"])    
-
 except:
     pass

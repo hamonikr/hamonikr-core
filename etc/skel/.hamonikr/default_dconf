@@ -24,7 +24,6 @@ if [ ! -f "/home/$USER/.hamonikr/default_dconf.done" ] ; then
         cp -af /usr/share/cinnamon/applets/scale@cinnamon.org /home/$USER/.cinnamon/configs/        
         cp -af /usr/share/cinnamon/applets/user@cinnamon.org /home/$USER/.cinnamon/configs/                
         cp -af /usr/share/cinnamon/applets/xrandr@cinnamon.org /home/$USER/.cinnamon/configs/
-        cp -af /usr/share/cinnamon/applets/weather@mockturtl /home/$USER/.cinnamon/configs/     
     fi
 
     # Albert Launcher Settings
@@ -49,7 +48,6 @@ if [ ! -f "/home/$USER/.hamonikr/default_dconf.done" ] ; then
         'panel1:left:1:grouped-window-list@cinnamon.org:1', 
         'panel1:right:0:systray@cinnamon.org:2', 
         'panel1:right:1:expo@cinnamon.org:3', 
-        'panel1:right:2:xapp-status@cinnamon.org:4', 
         'panel1:right:3:notifications@cinnamon.org:5', 
         'panel1:right:4:printers@cinnamon.org:6', 
         'panel1:right:5:removable-drives@cinnamon.org:7', 
@@ -88,9 +86,9 @@ if [ ! -f "/home/$USER/.hamonikr/default_dconf.done" ] ; then
     fi
 
     # gnome-terminal 설정
-    if [ -f "/home/$USER/.hamonikr/hamonikr-jin-terminal.dconf" ] ; then
+    if [ -f "/home/$USER/.hamonikr/hamonikr-terminal.dconf" ] ; then
         echo "update default terminal settings"  | tee -a $HOME/.hamonikr/${0##*/}.log
-        dconf load /org/gnome/terminal/legacy/profiles:/:`gsettings list-recursively org.gnome.Terminal.ProfilesList | grep default | cut -d' ' -f3 | tr -d "'"`/ < /home/$USER/.hamonikr/hamonikr-jin-terminal.dconf
+        dconf load /org/gnome/terminal/legacy/profiles:/:`gsettings list-recursively org.gnome.Terminal.ProfilesList | grep default | cut -d' ' -f3 | tr -d "'"`/ < /home/$USER/.hamonikr/hamonikr-terminal.dconf
     fi
 
     # nimf 입력기 설정
