@@ -12,7 +12,8 @@ Recommends: hamonikr-welcome,
          fonts-noto-cjk-extra, 
          fonts-inconsolata, 
          albert, 
-         unalz 
+         unalz,
+         figlet 
 Conflicts: mint-artwork-common
 Replaces: ubuntu-system-adjustments, 
           mint-artwork-common, 
