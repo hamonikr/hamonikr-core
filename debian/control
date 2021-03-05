@@ -13,10 +13,13 @@ Recommends: hamonikr-welcome,
          fonts-inconsolata, 
          albert, 
          unalz,
-         figlet 
+         figlet,
+         hamonikr-theme,
+         hamonikr-backgrounds 
 Conflicts: mint-artwork-common
 Replaces: ubuntu-system-adjustments, 
           mint-artwork-common, 
+          mint-artwork,
           firefox, 
           mintsystem, 
           cinnamon-l10n, 

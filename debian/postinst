@@ -2,6 +2,20 @@
 
 set -e
 
+update_icons (){
+    if [ -e /usr/share/backgrounds/hamonikr/default_background.jpg ]
+    then
+        touch /usr/share/backgrounds/hamonikr/default_background.jpg
+        echo "Updated timestamp for default background"
+    fi
+    if [ -e /usr/share/cinnamon/theme/menu.svg ]
+    then
+        touch /usr/share/cinnamon/theme/menu.svg
+        echo "Updated timestamp for /usr/share/cinnamon/theme/menu.svg"
+    fi    
+    gtk-update-icon-cache || true
+}
+
 case "$1" in
     configure|triggered)
         if [ -f "/usr/share/ubuntu-system-adjustments/systemd/adjust-grub-title" ] ; then
@@ -16,7 +30,9 @@ case "$1" in
             systemctl enable hamonikr-core.service
             systemctl daemon-reload || true
         fi
-        
+
+        update_icons || true
+        glib-compile-schemas /usr/share/glib-2.0/schemas || true
         fc-cache -v -f  >/dev/null 2>&1 || true
 
         update-mime-database /usr/share/mime || true

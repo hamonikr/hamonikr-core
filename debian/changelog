@@ -1,3 +1,12 @@
+hamonikr-core (2.1.0) entjin; urgency=medium
+
+  * Add etc/lightdm/lightdm-gtk-greeter.conf.d
+  * Add usr/share/cinnamon/applets
+  * Add usr/share/mint-artwork
+    - Changed hamonikr-theme, hamonikr-backgrounds as Recommends
+
+ -- HamoniKR <pkg@hamonikr.org>  Fri, 05 Mar 2021 18:14:53 +0900
+
 hamonikr-core (2.0.1) entjin; urgency=medium
 
   * Update debian/control
