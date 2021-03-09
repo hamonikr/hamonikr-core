@@ -1,3 +1,10 @@
+hamonikr-core (2.1.3) entjin; urgency=medium
+
+  * Update debian/control
+    - Change Depends and Recommends Fields
+
+ -- HamoniKR <pkg@hamonikr.org>  Tue, 09 Mar 2021 17:54:27 +0900
+
 hamonikr-core (2.1.2) entjin; urgency=medium
 
   * Add usr/share/nemo/actions/previous_workspace.nemo_action
