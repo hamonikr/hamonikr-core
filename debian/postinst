@@ -38,6 +38,11 @@ case "$1" in
         update-mime-database /usr/share/mime || true
         update-desktop-database /usr/share/applications || true
 
+        if ! which spacefm >/dev/null 2>&1
+        then
+            rm -f /usr/share/nemo/actions/spacefm_search.nemo_action || true
+        fi        
+
         /usr/bin/hamonikr-system-start || true
     ;;
     abort-upgrade|abort-remove|abort-deconfigure)

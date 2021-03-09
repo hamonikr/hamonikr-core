@@ -1,3 +1,13 @@
+hamonikr-core (2.1.1) entjin; urgency=medium
+
+  * Add usr/share/nemo/actions/previous_workspace.nemo_action
+  * Add usr/share/nemo/actions/next_workspace.nemo_action
+  * Add usr/share/nemo/actions/spacefm_search.nemo_action
+    - Add content search with spacefm
+    - Requires spacefm to be installed (apt install spacefm).
+
+ -- HamoniKR <pkg@hamonikr.org>  Tue, 09 Mar 2021 14:24:42 +0900
+
 hamonikr-core (2.1.0) entjin; urgency=medium
 
   * Add etc/lightdm/lightdm-gtk-greeter.conf.d
