@@ -40,8 +40,17 @@ case "$1" in
 
         if ! which spacefm >/dev/null 2>&1
         then
+            echo "SpaceFM Not Found"
             rm -f /usr/share/nemo/actions/spacefm_search.nemo_action || true
         fi        
+        
+        if ! which xdotool >/dev/null 2>&1
+        then
+            echo "xdotool Not Found"
+            rm -f /usr/share/nemo/actions/next_workspace.nemo_action || true
+            rm -f /usr/share/nemo/actions/previous_workspace.nemo_action || true
+        fi                
+        nemo -q || true
 
         /usr/bin/hamonikr-system-start || true
     ;;

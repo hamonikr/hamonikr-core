@@ -1,7 +1,13 @@
-hamonikr-core (2.1.1) entjin; urgency=medium
+hamonikr-core (2.1.2) entjin; urgency=medium
 
   * Add usr/share/nemo/actions/previous_workspace.nemo_action
   * Add usr/share/nemo/actions/next_workspace.nemo_action
+    - Requires xdotool to be installed.
+
+ -- HamoniKR <pkg@hamonikr.org>  Tue, 09 Mar 2021 15:03:52 +0900
+
+hamonikr-core (2.1.1) entjin; urgency=medium
+
   * Add usr/share/nemo/actions/spacefm_search.nemo_action
     - Add content search with spacefm
     - Requires spacefm to be installed (apt install spacefm).

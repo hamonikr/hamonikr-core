@@ -15,6 +15,7 @@ Recommends: hamonikr-welcome,
          unalz,
          figlet,
          spacefm,
+         xdotool,
          hamonikr-theme,
          hamonikr-backgrounds 
 Conflicts: mint-artwork-common
