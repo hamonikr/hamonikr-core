@@ -32,7 +32,6 @@ if [ ! -f "/home/$USER/.hamonikr/default_dconf.done" ] ; then
         cp -af /etc/skel/.config/albert /home/$USER/.config/
     fi                
     
-
     if [ ! -f "/home/$USER/.hamonikr/hamonikr-theme-backup.dconf" ] ; then
         # IF installed hamonikr-themes 
 
@@ -122,6 +121,14 @@ if [ ! -f "/home/$USER/.hamonikr/default_dconf.done" ] ; then
             gsettings set org.cinnamon.desktop.keybindings.custom-keybinding:/org/cinnamon/desktop/keybindings/custom-keybindings/custom2/ name '데스크탑 검색'
             gsettings set org.cinnamon.desktop.keybindings custom-list "['custom0','custom1','custom2']"
         fi
+    else
+        if command -v fsearch &> /dev/null ; then    
+            echo "update default keyboard shortcut settings for fsearch"  | tee -a $HOME/.hamonikr/${0##*/}.log                
+            gsettings set org.cinnamon.desktop.keybindings.custom-keybinding:/org/cinnamon/desktop/keybindings/custom-keybindings/custom0/ binding "['<Primary><Shift>f']"
+            gsettings set org.cinnamon.desktop.keybindings.custom-keybinding:/org/cinnamon/desktop/keybindings/custom-keybindings/custom0/ command 'fsearch'
+            gsettings set org.cinnamon.desktop.keybindings.custom-keybinding:/org/cinnamon/desktop/keybindings/custom-keybindings/custom0/ name '데스크탑 검색'
+            gsettings set org.cinnamon.desktop.keybindings custom-list "['custom0']"
+        fi
     fi
 
     # search provider
@@ -149,7 +156,7 @@ if [ ! -f "/home/$USER/.hamonikr/default_dconf.done" ] ; then
 
     # Desktop Community Icon
     if [ -f "/usr/share/applications/hamonikrorg.desktop" ]; then
-        echo "Update asbru font seting" | tee -a $HOME/.hamonikr/${0##*/}.log
+        echo "Update hamonikr community link icon" | tee -a $HOME/.hamonikr/${0##*/}.log
         if [ -d "$HOME/Desktop" ]; then
             cp /usr/share/applications/hamonikrorg.desktop $HOME/Desktop/hamonikrorg.desktop
         else

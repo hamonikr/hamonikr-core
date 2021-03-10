@@ -13,6 +13,18 @@ APT
         "^libnimf*";
         "^albert*";
         "^fsearch*";
+        "^boot-select*";        
+        "^cinnamon*";        
+        "^figlet*";
+        "^stacer*";        
+        "^unalz*";             
+        "^systemd-tui*";
+        "^neofetch*";        
+        "^qt-fsarchiver*";        
+        "^fonts-inconsolata*";        
+        "^fonts-noto-cjk-extra*";                
+        "^spacefm*";        
+        "^xdotool*";                        
         "main";
   };
 
