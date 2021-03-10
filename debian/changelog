@@ -1,3 +1,10 @@
+hamonikr-core (2.1.8) entjin; urgency=medium
+
+  * Update debian/control
+    - Add dependancy hamonikr-report
+
+ -- HamoniKR <pkg@hamonikr.org>  Wed, 10 Mar 2021 16:48:37 +0900
+
 hamonikr-core (2.1.7) entjin; urgency=medium
 
   * Fixed usr/share/applications/hamonikrorg.desktop
