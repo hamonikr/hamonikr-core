@@ -16,7 +16,11 @@ Depends: hamonikr-info (>> 2021.03.01),
          hamonikr-grub-theme,
          hamonikr-welcome
 Recommends: fonts-noto-cjk-extra, 
-            fonts-inconsolata
+            fonts-inconsolata,
+            spacefm,
+            xdotool,
+            nimf,
+            nimf-libhangul
 Conflicts: mint-artwork-common
 Replaces: ubuntu-system-adjustments, 
           mint-artwork-common, 
