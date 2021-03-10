@@ -1,3 +1,10 @@
+hamonikr-core (2.1.7) entjin; urgency=medium
+
+  * Fixed usr/share/applications/hamonikrorg.desktop
+    - Update english name
+
+ -- HamoniKR <pkg@hamonikr.org>  Wed, 10 Mar 2021 16:32:49 +0900
+
 hamonikr-core (2.1.6) entjin; urgency=medium
 
   * change control file depends
