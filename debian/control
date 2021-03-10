@@ -9,23 +9,14 @@ Package: hamonikr-core
 Architecture: all
 Depends: hamonikr-info (>> 2021.03.01), 
          hamonikr-keyring,
-         ubuntu-dbgsym-keyring,
          hamonikr-icons,
          hamonikr-themes,
          hamonikr-backgrounds,
          hamonikr-plymouth-theme,
          hamonikr-grub-theme,
-         hamonikr-welcome,
-         mintreport
-Recommends: albert, 
-            fonts-noto-cjk-extra, 
-            fonts-inconsolata, 
-            unalz,
-            figlet,
-            spacefm,
-            xdotool,
-            nimf, nimf-libhangul,            
-            fsearch-trunk,            
+         hamonikr-welcome
+Recommends: fonts-noto-cjk-extra, 
+            fonts-inconsolata
 Conflicts: mint-artwork-common
 Replaces: ubuntu-system-adjustments, 
           mint-artwork-common, 
